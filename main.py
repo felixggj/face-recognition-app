@@ -11,8 +11,8 @@ from firebase_admin import storage
 
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://realtimefacerecognition-cf9b7-default-rtdb.europe-west1.firebasedatabase.app/',
-    'storageBucket': 'realtimefacerecognition-cf9b7.appspot.com'
+    'databaseURL': 'YOURDATABASEURL',
+    'storageBucket': 'YOURSTORAGEBUCKETURL'
 })
 
 bucket = storage.bucket()
@@ -108,14 +108,14 @@ while True:
                     ref.child('total_attendance').set(studentInfo['total_attendance'])
                     ref.child('last_attendance_time').set(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
                 else:
-                    modeType = 3
+                    modeType = 1
                     counter = 0
                     imgBackground[44:44+633,808:808+414] = imgModeList[modeType]
 
             if modeType != 3:
 
                 if 10<counter<20:
-                    modeType = 2
+                    modeType = 1
                 
                 imgBackground[44:44+633,808:808+414] = imgModeList[modeType]
 
@@ -163,8 +163,5 @@ while True:
     cv2.imshow("Face Attendance", imgBackground)
     if cv2.waitKey(1) & 0xFF == ord('q'):  # break loop on 'q' key press
         break
-
-cap.release()
-cv2.destroyAllWindows()
 
 
