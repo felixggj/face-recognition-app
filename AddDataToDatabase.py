@@ -10,10 +10,10 @@ firebase_admin.initialize_app(cred, {
 ref = db.reference('Students') # creates a reference to the database
 
 data = {
-    '312654':
+    '321654':
         {
             'name': 'Felix GG',
-            'degree': 'Computer Science',
+            'degree': 'CS & AI',
             'starting_year': 2021,
             'total_attendance': 11,
             'standing': 'G',
