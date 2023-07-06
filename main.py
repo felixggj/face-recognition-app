@@ -33,7 +33,7 @@ for path in modePathList:
 
 # Loading the encoded file containing the three encoded versions of the images
 print('Loading Encoded File ...')
-file = open('EncodeFile.p', 'rb')
+file = open('.gitignore/EncodeFile.p', 'rb')
 encodeListKnownWithIds = pickle.load(file)
 file.close()
 encodeListKnown, studentIds = encodeListKnownWithIds
