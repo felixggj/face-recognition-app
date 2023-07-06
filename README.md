@@ -21,7 +21,7 @@ It will also show a live feed of the webcam with the recognized faces highlighte
 
 - To create a new environment using the `.yml` file, navigate to the directory where the `environment.yml` file is located and use the following command:
 
-```conda env create -f environment.yml````
+`conda env create -f environment.yml`
 
 - Activate the environment using:
 
